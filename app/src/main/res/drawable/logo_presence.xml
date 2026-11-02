@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="110dp"
+    android:height="110dp"
+    android:viewportWidth="110"
+    android:viewportHeight="110">
+
+    <!-- Cercle vert -->
+    <path
+        android:fillColor="#2E8B57"
+        android:pathData="M55,55m-55,0a55,55 0,1 1,110 0a55,55 0,1 1,-110 0" />
+
+    <!-- Tête -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,50m-13,0a13,13 0,1 1,26 0a13,13 0,1 1,-26 0" />
+
+    <!-- Corps -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,86C24,72 34,64 48,64C62,64 72,72 72,86Z" />
+
+    <!-- Pastille de validation -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M78,42m-12,0a12,12 0,1 1,24 0a12,12 0,1 1,-24 0" />
+    <path
+        android:fillColor="#2E8B57"
+        android:pathData="M78,42m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M73.5,42.5L76.8,45.8L82.8,38.8" />
+</vector>
