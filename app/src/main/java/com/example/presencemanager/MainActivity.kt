@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                 "Application : PrésenceManager\n" +
                         "Version : 1.0\n" +
                         "Développeur : hafsa_elotmani\n" +
-                        "GitHub : https://github.com/Hafsa-elotmani/PresenceManager"
+                        "GitHub : https://github.com/hafsaelotmani/PresenceManager"
             )
             .setPositiveButton("OK", null)
             .show()
