@@ -26,7 +26,7 @@ Identifiants conservés : `cardGroupes`, `cardAppel`, `cardHistorique`, `cardSta
 
 ### Définitions
 
-Un **événement utilisateur** est une action effectuée par l'utilisateur sur l'écran (appui, appui prolongé, double appui). Un **Event Listener** associe une réaction à un composant : l'événement est ensuite traité dans le code Kotlin.
+Un **événement utilisateur** est une action effectuée par l'écran (appui, appui prolongé, double appui). Un **Event Listener** associe une réaction à un composant : l'événement est ensuite traité dans le code Kotlin.
 
 ### Différence entre les trois gestes
 
@@ -44,7 +44,15 @@ Un **événement utilisateur** est une action effectuée par l'utilisateur sur l
 | Clic simple (`OnClickListener`) | `txtFooter` et `txtFooterDashboard` | Boîte « Informations du développeur » avec lien GitHub et OK |
 | Clic simple (`OnClickListener`) | `btnCommencer` | Ouvre le tableau de bord |
 
-Le double-clic est volontairement placé sur `imgProfil` et non sur une carte, pour éviter le conflit avec l'ouverture immédiate d'une activité au premier clic.
+## TP04 — Gestion des actions contextuelles : CAB et Pop-up
+
+Dans ce TP04, deux boutons indépendants ont été ajoutés au tableau de bord (`Dashboar`) pour découvrir :
+1. **La barre d'actions contextuelle (CAB)** (`btn` avec couleur `#2563EB`) :
+   - Fichier menu associé : `menu_cab_dashboard.xml`
+   - Actions : « Afficher » (ouvre un `AlertDialog`) et « Terminer » (ferme la CAB).
+2. **Le menu flottant / Pop-up** (`btn` avec couleur `#0F766E`) :
+   - Fichier menu associé : `menu_popup_dashboard.xml`
+   - Actions : « Ouvrir Groupes » (ouvre `GroupesActivity`) et « Informations » (ouvre un `AlertDialog`).
 
 ### Pages accessibles depuis le tableau de bord
 
@@ -52,8 +60,6 @@ Le double-clic est volontairement placé sur `imgProfil` et non sur une carte, p
 - `AppelActivity` (Faire l'appel)
 - `HistoriqueActivity` (Historique)
 - `StatistiquesActivity` (Statistiques)
-
-Ces pages affichent pour le moment le titre de la fonctionnalité et le message « Fonctionnalité en cours de développement ». La gestion des données sera abordée dans les prochains TP.
 
 ### Informations du développeur
 
