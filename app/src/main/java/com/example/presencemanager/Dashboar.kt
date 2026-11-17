@@ -131,7 +131,6 @@ class Dashboar : AppCompatActivity() {
                 actionMode = startSupportActionMode(cabCallback)
             }
         }
-
         val btnPopup = findViewById<Button>(R.id.btnPopup)
         btnPopup.setOnClickListener {
             val popupMenu = PopupMenu(this, btnPopup)
@@ -156,15 +155,14 @@ class Dashboar : AppCompatActivity() {
             popupMenu.show()
         }
     }
-
     private fun afficherInfosDeveloppeur() {
         val dialogue = AlertDialog.Builder(this)
             .setTitle("Informations du développeur")
             .setMessage(
                 "Application : PrésenceManager\n" +
                         "Version : 1.0\n" +
-                        "Développeur : NOM_PRENOM\n" +
-                        "GitHub : https://github.com/VOTRE_IDENTIFIANT/PresenceManager"
+                        "Développeur : ELOTMANI_HAFSA\n" +
+                        "GitHub : https://github.com/hafsaelotmani/PresenceManager"
             )
             .setPositiveButton("OK", null)
             .show()
