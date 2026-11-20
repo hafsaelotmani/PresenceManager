@@ -38,4 +38,6 @@ class GroupeAdapter(
         txtNom.text = groupes[position].nom
         return view
     }
+
+
 }

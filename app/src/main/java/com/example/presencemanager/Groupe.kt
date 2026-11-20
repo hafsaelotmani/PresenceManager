@@ -4,3 +4,4 @@ data class Groupe(
     val nom: String,
     val description: String
 )
+
