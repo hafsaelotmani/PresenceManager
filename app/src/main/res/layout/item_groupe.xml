@@ -1,26 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:gravity="center_vertical"
-    android:padding="18dp"
-    android:background="#FFFFFF">
+    android:minHeight="68dp"
+    android:padding="12dp">
 
-    <TextView
-        android:id="@+id/txtNomGroupe"
-        android:layout_width="match_parent"
+    <ImageView
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src="@android:drawable/ic_menu_myplaces"
+        android:contentDescription="Groupe"
+        app:tint="#1E3A5F" />
+
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="DEVOAM201"
-        android:textSize="18sp"
-        android:textColor="#1E3A5F"
-        android:textStyle="bold"/>
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="›"
-        android:textSize="26sp"
-        android:textColor="#64748B" />
+        <TextView
+            android:id="@+id/txtNomGroupe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#1E3A5F"
+            android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/txtEffectif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#64748B" />
+    </LinearLayout>
 </LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/txtDateHistorique"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20/02/2025 - 09:00"
+        android:textSize="14sp"
+        android:textColor="#64748B" />
+
+    <TextView
+        android:id="@+id/txtGroupeHistorique"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="DEVOAM201"
+        android:textSize="17sp"
+        android:textColor="#1E3A5F"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtBilanHistorique"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="5 Présents • 2 Absents"
+        android:textSize="14sp"
+        android:textColor="#059669" />
+
+</LinearLayout>

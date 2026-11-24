@@ -12,32 +12,36 @@ class GroupeAdapter(
     private val groupes: List<Groupe>
 ) : BaseAdapter() {
 
-    override fun getCount(): Int {
-        return groupes.size
+    override fun getCount(): Int = groupes.size
+    override fun getItem(position: Int): Groupe = groupes[position]
+    override fun getItemId(position: Int): Long = position.toLong()
+
+    // Patron ViewHolder pour mémoriser les références aux TextView
+    private class ViewHolder(val nom: TextView, val effectif: TextView)
+
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val row: View
+        val holder: ViewHolder
+
+        // 1. Recyclage de la vue avec convertView
+        if (convertView == null) {
+            row = LayoutInflater.from(context)
+                .inflate(R.layout.item_groupe, parent, false)
+            holder = ViewHolder(
+                row.findViewById(R.id.txtNomGroupe),
+                row.findViewById(R.id.txtEffectif)
+            )
+            row.tag = holder
+        } else {
+            row = convertView
+            holder = row.tag as ViewHolder
+        }
+
+        // 2. Remplissage des données
+        val groupe = getItem(position)
+        holder.nom.text = groupe.nom
+        holder.effectif.text = "${groupe.effectif} stagiaires"
+
+        return row
     }
-
-    override fun getItem(position: Int): Groupe {
-        return groupes[position]
-    }
-
-    override fun getItemId(position: Int): Long {
-        return position.toLong()
-    }
-
-    override fun getView(
-        position: Int,
-        convertView: View?,
-        parent: ViewGroup
-    ): View {
-
-        val view = convertView ?: LayoutInflater.from(context)
-            .inflate(R.layout.item_groupe, parent, false)
-        val txtNom = view.findViewById<TextView>(
-            R.id.txtNomGroupe
-        )
-        txtNom.text = groupes[position].nom
-        return view
-    }
-
-
 }

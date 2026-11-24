@@ -3,34 +3,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
     android:background="#F8FAFC">
 
+    <!-- En-tête -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Groupes"
-        android:gravity="center"
-        android:textColor="#1E3A5F"
-        android:textSize="24sp"
+        android:layout_height="64dp"
+        android:background="#1E3A5F"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:text="Liste des groupes"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
         android:textStyle="bold" />
 
-    <TextView
+    <!-- Barre de bascule entre les deux adaptateurs -->
+    <LinearLayout
+        android:id="@+id/layoutChoixAdapter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Choisissez votre groupe"
-        android:gravity="center"
-        android:textColor="#64748B"
-        android:textSize="16sp" />
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
 
+        <Button
+            android:id="@+id/btnArrayAdapter"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="ArrayAdapter"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2563EB" />
+
+        <Button
+            android:id="@+id/btnBaseAdapter"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="BaseAdapter"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#0F766E" />
+    </LinearLayout>
+
+    <!-- ListView recevant alternativement les deux adaptateurs -->
     <ListView
-        android:id="@+id/list"
+        android:id="@+id/lvGroupes"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="20dp"
-        android:divider="#CBD5E1"
+        android:divider="#E2E8F0"
         android:dividerHeight="1dp" />
 
 </LinearLayout>
